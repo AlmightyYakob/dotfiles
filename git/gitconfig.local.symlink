@@ -24,3 +24,8 @@
 	whitespace = red reverse
 [core]
 	pager = diff-so-fancy | less --tabs=4 -RFX
+    excludesfile = ~/.gitignore
+    editor = vim
+    compression = -1
+    autocrlf = input
+    whitespace = trailing-space,space-before-tab

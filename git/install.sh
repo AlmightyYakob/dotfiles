@@ -1,4 +1,4 @@
 #!/bin/sh
 
-sudo ln -s $HOME/.gitconfig $DOTFILES/git/gitconfig.local.symlink
-sudo ln -s $HOME/.gitignore $DOTFILES/git/gitignore.symlink
+sudo ln -s $DOTFILES/git/gitconfig.local.symlink $HOME/.gitconfig
+sudo ln -s $DOTFILES/git/gitignore.symlink $HOME/.gitignore
