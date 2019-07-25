@@ -55,10 +55,10 @@ bindsym $mod+space exec rofi -show run -opacity "85" -bw 0 -bc "$bg-color" -bg "
 # bindsym $mod+d exec --no-startup-id i3-dmenu-desktop
 
 # change focus
-bindsym $mod+j focus left
-bindsym $mod+k focus down
-bindsym $mod+l focus up
-bindsym $mod+semicolon focus right
+#bindsym $mod+j focus left
+#bindsym $mod+k focus down
+#bindsym $mod+l focus up
+#bindsym $mod+semicolon focus right
 
 # alternatively, you can use the cursor keys:
 bindsym $mod+Left focus left
@@ -177,6 +177,9 @@ bar {
 	}
 }
 
+# Lock Screen
+bindsym $mod+l exec i3lock
+
 # Pulse Audio controls
 bindsym XF86AudioRaiseVolume exec --no-startup-id pactl -- set-sink-volume 0 +5% 
 bindsym XF86AudioLowerVolume exec --no-startup-id pactl -- set-sink-volume 0 -5%
@@ -195,3 +198,4 @@ bindsym XF86AudioPrev exec playerctl previous
 # start random stuff
 exec_always compton
 #exec_always feh --randomize --bg-fill ~/Pictures/wallpapers/*
+
