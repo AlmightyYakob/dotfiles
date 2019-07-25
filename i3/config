@@ -180,6 +180,10 @@ bar {
 # Lock Screen
 bindsym $mod+l exec i3lock --color "$bg-color"
 
+# Multi-Monitor
+bindsym $mod+Control+Shift+Right move container to output right
+bindsym $mod+Control+Shift+Left move container to output left
+
 # Pulse Audio controls
 bindsym XF86AudioRaiseVolume exec --no-startup-id pactl -- set-sink-volume 0 +5% 
 bindsym XF86AudioLowerVolume exec --no-startup-id pactl -- set-sink-volume 0 -5%
