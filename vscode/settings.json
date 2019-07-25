@@ -1,0 +1,8 @@
+{
+    "python.pythonPath": "/usr/bin/python3",
+    "python.linting.pylintEnabled": true,
+    "python.linting.enabled": true,
+    "window.zoomLevel": 0,
+    "vsicons.dontShowNewVersionMessage": true,
+    "breadcrumbs.enabled": true
+}
