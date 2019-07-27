@@ -179,6 +179,8 @@ bar {
 
 # Lock Screen
 bindsym $mod+l exec i3lock --color "$bg-color"
+# Shutdown
+bindsym Control+$alt+s exec shutdown now
 
 # Multi-Monitor
 bindsym $mod+Control+Shift+Right move container workspace to output right
