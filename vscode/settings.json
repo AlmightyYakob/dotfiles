@@ -1,8 +1,15 @@
 {
     "python.pythonPath": "/usr/bin/python3",
-    "python.linting.pylintEnabled": true,
     "python.linting.enabled": true,
+    "python.linting.pylintEnabled": false,
+    "python.linting.flake8Enabled": true,
+    "python.formatting.provider": "black",
     "window.zoomLevel": 0,
     "vsicons.dontShowNewVersionMessage": true,
-    "breadcrumbs.enabled": true
+    "breadcrumbs.enabled": true,
+    "files.trimTrailingWhitespace": true,
+    "gitProjectManager.baseProjectsFolders": [
+        "/home/jake/git"
+    ],
+    "workbench.colorTheme": "Ayu Mirage"
 }
