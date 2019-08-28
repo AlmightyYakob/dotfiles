@@ -1,8 +1,7 @@
 # VS Code 
 
-
 ## Extensions
-* Atom One Dark Theme
-* Ayu
-* Better TOML
-* Cobalt2 Theme
+To generate a list of extensions, run
+```
+code --list-extensions
+```
