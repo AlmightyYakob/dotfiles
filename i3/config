@@ -185,6 +185,13 @@ bindsym $mod+l exec i3lock --color "$bg-color"
 # Shutdown
 bindsym Control+$alt+s exec shutdown now
 
+# Screenshot
+# Multi-screen screenshots
+bindsym --release Print exec gnome-screenshot
+
+# OSX-like area selection screenshots
+bindsym --release Shift+Print exec gnome-screenshot -a
+
 # Multi-Monitor
 bindsym $mod+Control+Shift+Right move container workspace to output right
 bindsym $mod+Control+Shift+Left move container workspace to output left
