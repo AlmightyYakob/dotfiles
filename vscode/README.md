@@ -1,7 +1,7 @@
 # VS Code 
 
 ## Extensions
-To generate a list of extensions, run
+To generate a new list of extensions, run
 ```
-code --list-extensions
+code --list-extensions > modules.txt
 ```
