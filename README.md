@@ -46,3 +46,4 @@ These packages don't actualy have dotfiles, but are just packages I want to keep
 * xclip
 * dunst
 * chrome
+* diff-so-fancy
