@@ -47,3 +47,4 @@ These packages don't actualy have dotfiles, but are just packages I want to keep
 * dunst
 * chrome
 * diff-so-fancy
+* Oh-my-zsh
