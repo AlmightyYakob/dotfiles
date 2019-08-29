@@ -45,3 +45,4 @@ These packages don't actualy have dotfiles, but are just packages I want to keep
 * slack
 * xclip
 * dunst
+* chrome
