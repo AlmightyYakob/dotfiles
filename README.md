@@ -5,7 +5,7 @@ These are my dotfiles, mostly for me, but if anyone wants to use them feel free.
 * vscode
 * i3/i3-gaps/sway
 * git
-* zah
+* zsh
 
 ## Window Manager Dependencies
 ### Wayland
