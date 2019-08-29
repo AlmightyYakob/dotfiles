@@ -1,15 +1,19 @@
 # Dotfiles
 These are my dotfiles, mostly for me, but if anyone wants to use them feel free.
 
-## Dependencies
+## Packages with Dotfiles
+* vscode
+* i3/i3-gaps/sway
+* git
+* zah
+
+## Window Manager Dependencies
 ### Wayland
-* Sway
 * Waybar
 * sway-bg
 * gsettings
 
 ### Xorg
-* i3-gaps
 * polybar
 * x-backlight
 * lxappearance
@@ -18,9 +22,8 @@ These are my dotfiles, mostly for me, but if anyone wants to use them feel free.
 * pactl
 * playerctl
 * rofi
-* vscode
 
-# Packages
+# General Packages
 These packages don't actualy have dotfiles, but are just packages I want to keep a list of
 
 #### Widget/Shell Themes
@@ -36,15 +39,14 @@ These packages don't actualy have dotfiles, but are just packages I want to keep
 
 #### Utility
 * gnome-terminal
-* Gogh
-* zsh
+* [Gogh](https://github.com/Mayccoll/Gogh)
 * docker-ce && docker-compose
 * tlp
-* vim
+* [vim](https://github.com/amix/vimrc)
 * yarn/npm
 * slack
 * xclip
 * dunst
 * chrome
-* diff-so-fancy
-* Oh-my-zsh
+* [diff-so-fancy](https://github.com/so-fancy/diff-so-fancy)
+* [Oh-my-zsh](https://github.com/robbyrussell/oh-my-zsh)
