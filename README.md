@@ -38,3 +38,13 @@ These packages don't actualy have dotfiles, but are just packages I want to keep
 * gnome-terminal
 * Gogh
 * zsh
+* docker-ce && docker-compose
+* tlp
+* vim
+* yarn/npm
+* slack
+* xclip
+* dunst
+* chrome
+* diff-so-fancy
+* Oh-my-zsh
