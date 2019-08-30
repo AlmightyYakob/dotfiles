@@ -50,3 +50,6 @@ These packages don't actualy have dotfiles, but are just packages I want to keep
 * chrome
 * [diff-so-fancy](https://github.com/so-fancy/diff-so-fancy)
 * [Oh-my-zsh](https://github.com/robbyrussell/oh-my-zsh)
+
+# PPAs
+* [polybar, i3-gaps, compton](https://launchpad.net/~kgilmer/+archive/ubuntu/speed-ricer)
