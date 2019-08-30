@@ -7,7 +7,8 @@ if test "$(which code)"; then
 	else
 		VSCODE_HOME="$HOME/.config/Code"
 	fi
-    USER_SETTINGS="$VSCODE_HOME/User"
+
+    	USER_SETTINGS="$VSCODE_HOME/User"
 	mkdir -p $USER_SETTINGS
 
 	ln -sf "$DOTFILES/vscode/settings.json" "$USER_SETTINGS/settings.json"
