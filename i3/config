@@ -219,3 +219,12 @@ exec_always --no-startup-id xsetroot -solid "$bg-color"
 # Start applets
 exec --no-startup-id nm-applet
 
+# Turn off title bars for i3-gaps
+for_window [class=".*"] border pixel 0
+
+# i3-gaps
+gaps inner 10 
+gaps outer 5
+
+bindsym $mod+z		gaps outer current plus 5
+bindsym $mod+Shift+z	gaps outer current minus 5
