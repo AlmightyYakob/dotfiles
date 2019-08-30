@@ -7,21 +7,13 @@ These are my dotfiles, mostly for me, but if anyone wants to use them feel free.
 * git
 * zsh
 
-## Window Manager Dependencies
-### Wayland
-* Waybar
-* sway-bg
-* gsettings
-
-### Xorg
+## Packages used by Dotfiles
 * polybar
+* feh
+* rofi
 * x-backlight
-* lxappearance
-
-### Independent
 * pactl
 * playerctl
-* rofi
 
 # General Packages
 These packages don't actualy have dotfiles, but are just packages I want to keep a list of
@@ -36,6 +28,9 @@ These packages don't actualy have dotfiles, but are just packages I want to keep
 * [Flat-remix](https://drasite.com/flat-remix#Installation)
 * [Paper](https://snwh.org/paper/download)
 * Plane
+
+#### Theme tooling
+* lxappearance
 
 #### Utility
 * gnome-terminal
