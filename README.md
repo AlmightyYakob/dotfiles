@@ -27,14 +27,14 @@ These are my dotfiles, mostly for me, but if anyone wants to use them feel free.
 These packages don't actualy have dotfiles, but are just packages I want to keep a list of
 
 #### Widget/Shell Themes
-* Matcha
+* [Matcha](https://github.com/vinceliuice/matcha)
+* [Vimix](https://github.com/vinceliuice/vimix-gtk-themes)
 * Ant
-* Vimix
 
 #### Icon Themes
 * ePapirus
-* Flat-remix
-* Paper
+* [Flat-remix](https://drasite.com/flat-remix#Installation)
+* [Paper](https://snwh.org/paper/download)
 * Plane
 
 #### Utility
