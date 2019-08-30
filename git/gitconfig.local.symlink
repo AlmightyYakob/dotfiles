@@ -1,29 +1,29 @@
 [user]
-	name = Jacob Nesbitt
-	email = jjnesbitt2@gmail.com
+    name = Jacob Nesbitt
+    email = jjnesbitt2@gmail.com
 [credential]
-	helper = cache
+    helper = cache
     timeout = 600
 [merge]
-	tool = vscode
+    tool = vscode
 [mergetool "vscode"]
-	cmd = "code --wait "
+    cmd = "code --wait "
 [color]
-	ui = true
+    ui = true
 [color "diff-highlight"]
-	oldNormal = red bold
-	oldHighlight = red bold 52
-	newNormal = green bold
-	newHighlight = green bold 22
+    oldNormal = red bold
+    oldHighlight = red bold 52
+    newNormal = green bold
+    newHighlight = green bold 22
 [color "diff"]
-	meta = 11
-	frag = magenta bold
-	commit = yellow bold
-	old = red bold
-	new = green bold
-	whitespace = red reverse
+    meta = 11
+    frag = magenta bold
+    commit = yellow bold
+    old = red bold
+    new = green bold
+    whitespace = red reverse
 [core]
-	pager = diff-so-fancy | less --tabs=4 -RFX
+    pager = diff-so-fancy | less --tabs=4 -RFX
     excludesfile = ~/.gitignore
     editor = vim
     compression = -1
