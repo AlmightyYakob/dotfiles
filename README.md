@@ -53,3 +53,6 @@ These packages don't actualy have dotfiles, but are just packages I want to keep
 
 # PPAs
 * [polybar, i3-gaps, compton](https://launchpad.net/~kgilmer/+archive/ubuntu/speed-ricer)
+
+# Resources
+* [Configuring touchpad](https://cravencode.com/post/essentials/enable-tap-to-click-in-i3wm/)
