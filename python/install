@@ -32,4 +32,6 @@ try:
 
     pip_main(PIP_ARGS)
 except ImportError:
-    subprocess.run(["python", "-m", "pip"].extend(PIP_ARGS))
+    args = ["python", "-m", "pip"]
+    args.extend(PIP_ARGS)
+    subprocess.run(args)
