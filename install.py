@@ -34,9 +34,10 @@ def main():
         dirs = os.listdir(entry)
 
         if MAPPING_FILENAME in dirs:
-            print(f"Linking files in entry: {entry}")
             mapping_file = os.path.join(entry, MAPPING_FILENAME)
             mapping = json.load(open(mapping_file))
+
+            print(f"Linking files in entry: {os.path.basename(entry)}")
 
             for part_source, part_dest in mapping.items():
                 source = os.path.join(DOTFILES, os.path.expandvars(part_source))
@@ -48,8 +49,12 @@ def main():
 
                 subprocess.run(["ln", f"-ns{force or ''}", source, dest])
 
+            print("...done\n")
+
         if SCRIPT_FILENAME in dirs:
             print(f"Running scripts in entry: {entry}")
+            script_file = os.path.join(entry, SCRIPT_FILENAME)
+            print(script_file)
 
 
 if __name__ == "__main__":
