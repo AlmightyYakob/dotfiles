@@ -9,8 +9,8 @@
     "breadcrumbs.enabled": true,
     "files.trimTrailingWhitespace": true,
     "gitProjectManager.baseProjectsFolders": [
-	"/home/jake/git",
-	"/home/jake/projects"
+	    "/home/jake/git",
+	    "/home/jake/projects"
     ],
     "workbench.colorTheme": "Ayu Mirage"
 }
