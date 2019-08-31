@@ -9,11 +9,7 @@ MAPPING_FILENAME = "links.json"
 SCRIPT_FILENAME = "install"
 
 
-def main():
-    force = "f" if "-f" in sys.argv else None
-    no_map = True if "--no-map" in sys.argv else None
-    no_script = True if "--no-script" in sys.argv else None
-
+def main(force=None, no_map=None, no_script=None):
     DOTFILES = os.path.abspath((os.path.dirname(__file__)))
 
     # Get root dirs, ignore hidden dirs like .git
@@ -45,7 +41,7 @@ def main():
                 if not os.path.exists(os.path.dirname(dest)):
                     subprocess.run(["mkdir", "-p", dest_dir])
 
-                subprocess.run(["ln", f"-ns{force or ''}", source, dest])
+                subprocess.run(["ln", f"-ns{'f' if force else ''}", source, dest])
 
             print("...done\n")
 
@@ -63,5 +59,18 @@ def main():
             print("----------------------------------")
 
 
+def help_func():
+    print("Insert help text here")
+
+
 if __name__ == "__main__":
-    main()
+    force = True if "-f" in sys.argv else None
+    no_map = True if "--no-map" in sys.argv else None
+    no_script = True if "--no-script" in sys.argv else None
+    help_arg = True if "--help" in sys.argv else None
+
+    if help_arg:
+        help_func()
+        exit()
+
+    main(force=force, no_map=no_map, no_script=no_script)
