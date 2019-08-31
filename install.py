@@ -3,7 +3,8 @@
 # GOAL:
 # This install does all installing
 # All directories have a paths.json file, which maps the src paths to the target paths
-# Directories can have an optional extra file, which is a script that is run if it exists
+# Directories can have an optional extra file,
+# which is a script that is run if it exists
 
 
 import os
@@ -18,7 +19,8 @@ SCRIPT_FILENAME = "script.py"
 def main():
     force = "f" if "-f" in sys.argv else None
 
-    # If put back into a folder: DOTFILES = '/'.join(os.path.abspath(__file__).split('/')[:-2])
+    # If put back into a folder:
+    # DOTFILES = '/'.join(os.path.abspath(__file__).split('/')[:-2])
     DOTFILES = os.path.abspath((os.path.dirname(__file__)))
 
     # Get root dirs, ignore hidden dirs like .git
