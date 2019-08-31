@@ -1,12 +1,5 @@
 #!/usr/bin/env python3
 
-# GOAL:
-# This install does all installing
-# All directories have a paths.json file, which maps the src paths to the target paths
-# Directories can have an optional extra file,
-# which is a script that is run if it exists
-
-
 import os
 import sys
 import subprocess
