@@ -1,0 +1,4 @@
+{
+  "git/gitconfig.local.symlink": "$HOME/.gitconfig",
+  "git/gitignore.symlink": "$HOME/.gitignore"
+}
