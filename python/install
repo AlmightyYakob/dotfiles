@@ -2,6 +2,9 @@
 
 import os
 import subprocess
+import requests
+
+CURRENT_DIR = os.path.dirname(os.path.abspath(__file__))
 
 # Link usr/bin/python -> usr/bin/python3
 TARGET_PYTHON = "/usr/bin/python"
@@ -11,15 +14,22 @@ if os.path.exists(SRC_PYTHON) and os.path.exists(TARGET_PYTHON):
     subprocess.run(["ln", "-ns", SRC_PYTHON, TARGET_PYTHON])
 
 
-# Install pip?
+# Install pip
+script_contents = requests.get("https://bootstrap.pypa.io/get-pip.py").content
+script_path = f"{CURRENT_DIR}/get-pip.py"
+with open(script_path, "wb") as f:
+    f.write(script_contents)
+
+subprocess.run(["python3", script_path, "--user"])
+
 
 # Install default global python/pip modules
-CURRENT_DIR = os.path.dirname(os.path.abspath(__file__))
 MODULES_FILE = f"{CURRENT_DIR}/pip-modules.txt"
 PIP_ARGS = ["install", "--user", "-r", MODULES_FILE]
 
 try:
     from pip._internal import main as pip_main
+
     pip_main(PIP_ARGS)
 except ImportError:
     subprocess.run(["python", "-m", "pip"].extend(PIP_ARGS))
