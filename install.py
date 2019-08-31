@@ -21,8 +21,6 @@ def main():
     no_map = True if "--no-map" in sys.argv else None
     no_script = True if "--no-script" in sys.argv else None
 
-    # If put back into a folder:
-    # DOTFILES = '/'.join(os.path.abspath(__file__).split('/')[:-2])
     DOTFILES = os.path.abspath((os.path.dirname(__file__)))
 
     # Get root dirs, ignore hidden dirs like .git
