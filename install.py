@@ -13,11 +13,13 @@ import subprocess
 import json
 
 MAPPING_FILENAME = "links.json"
-SCRIPT_FILENAME = "script.py"
+SCRIPT_FILENAME = "install"
 
 
 def main():
     force = "f" if "-f" in sys.argv else None
+    no_map = True if "--no-map" in sys.argv else None
+    no_script = True if "--no-script" in sys.argv else None
 
     # If put back into a folder:
     # DOTFILES = '/'.join(os.path.abspath(__file__).split('/')[:-2])
@@ -34,8 +36,11 @@ def main():
 
     for entry in root_dirs:
         dirs = os.listdir(entry)
+        processed = False
 
-        if MAPPING_FILENAME in dirs:
+        if MAPPING_FILENAME in dirs and not no_map:
+            processed = True
+
             mapping_file = os.path.join(entry, MAPPING_FILENAME)
             mapping = json.load(open(mapping_file))
 
@@ -53,10 +58,18 @@ def main():
 
             print("...done\n")
 
-        if SCRIPT_FILENAME in dirs:
+        if SCRIPT_FILENAME in dirs and not no_script:
+            processed = True
+
             print(f"Running scripts in entry: {entry}")
+
             script_file = os.path.join(entry, SCRIPT_FILENAME)
-            print(script_file)
+            subprocess.run([script_file])
+
+            print("...done\n")
+
+        if processed:
+            print("----------------------------------")
 
 
 if __name__ == "__main__":

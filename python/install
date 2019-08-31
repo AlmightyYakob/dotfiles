@@ -1,0 +1,25 @@
+#!/usr/bin/env python3
+
+import os
+import subprocess
+
+# Link usr/bin/python -> usr/bin/python3
+TARGET_PYTHON = "/usr/bin/python"
+SRC_PYTHON = "/usr/bin/python3"
+
+if os.path.exists(SRC_PYTHON) and os.path.exists(TARGET_PYTHON):
+    subprocess.run(["ln", "-ns", SRC_PYTHON, TARGET_PYTHON])
+
+
+# Install pip?
+
+# Install default global python/pip modules
+CURRENT_DIR = os.path.dirname(os.path.abspath(__file__))
+MODULES_FILE = f"{CURRENT_DIR}/pip-modules.txt"
+PIP_ARGS = ["install", "--user", "-r", MODULES_FILE]
+
+try:
+    from pip._internal import main as pip_main
+    pip_main(PIP_ARGS)
+except ImportError:
+    subprocess.run(["python", "-m", "pip"].extend(PIP_ARGS))
