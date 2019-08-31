@@ -1,0 +1,5 @@
+{
+  "i3/config": "$HOME/.config/i3/config",
+  "i3/i3blocks.conf": "$HOME/.config/i3/i3blocks.conf",
+  "i3/scripts": "$HOME/.config/i3/scripts"
+}
