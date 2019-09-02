@@ -1,25 +1,47 @@
 #!/usr/bin/env python3
 
+import argparse
 import os
 import sys
 import subprocess
 import json
 
+
 MAPPING_FILENAME = "links.json"
 SCRIPT_FILENAME = "install"
 
+parser = argparse.ArgumentParser(description="Install dotfiles.")
+parser.add_argument(
+    "-f", "--force", action="store_true", help="Force re-linking of files."
+)
+parser.add_argument(
+    "--no-map", action="store_true", help="Skip the file linking stage."
+)
+parser.add_argument(
+    "--no-script", action="store_true", help="Skip the custom install stage."
+)
+parser.add_argument(
+    "dirs",
+    nargs="*",
+    help="The dotfiles you wish to run the install script on."
+    "If none specified, the script runs on all present.",
+)
 
-def main(force=None, no_map=None, no_script=None):
+
+def main(dirs=[], force=None, no_map=None, no_script=None):
     DOTFILES = os.path.abspath((os.path.dirname(__file__)))
 
     # Get root dirs, ignore hidden dirs like .git
-    root_dirs = sorted(
-        [
-            os.path.join(DOTFILES, folder)
-            for folder in list(os.walk(DOTFILES))[0][1]
-            if folder[0] != "."
-        ]
-    )
+    base_root_dirs = [
+        folder
+        for folder in list(os.walk(DOTFILES))[0][1]
+        if folder[0] != "." and (len(dirs) == 0 or folder in dirs)
+    ]
+    root_dirs = sorted([os.path.join(DOTFILES, folder) for folder in base_root_dirs])
+
+    if len(base_root_dirs) == 0 and len(dirs) != 0:
+        print(f"Error: Invalid directory names: {', '.join(dirs)}")
+        exit()
 
     for entry in root_dirs:
         dirs = os.listdir(entry)
@@ -59,18 +81,6 @@ def main(force=None, no_map=None, no_script=None):
             print("----------------------------------")
 
 
-def help_func():
-    print("Insert help text here")
-
-
 if __name__ == "__main__":
-    force = True if "-f" in sys.argv else None
-    no_map = True if "--no-map" in sys.argv else None
-    no_script = True if "--no-script" in sys.argv else None
-    help_arg = True if "--help" in sys.argv else None
-
-    if help_arg:
-        help_func()
-        exit()
-
-    main(force=force, no_map=no_map, no_script=no_script)
+    args = parser.parse_args()
+    main(dirs=args.dirs, force=args.force, no_map=args.no_map, no_script=args.no_script)
