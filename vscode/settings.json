@@ -12,5 +12,6 @@
 	    "/home/jake/git",
 	    "/home/jake/projects"
     ],
-    "workbench.colorTheme": "Ayu Mirage"
+    "workbench.colorTheme": "Ayu Mirage",
+    "workbench.startupEditor": "none"
 }
