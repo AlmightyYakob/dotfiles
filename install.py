@@ -2,7 +2,6 @@
 
 import argparse
 import os
-import sys
 import subprocess
 import json
 
@@ -60,10 +59,14 @@ def main(dirs=[], force=None, no_map=None, no_script=None):
                 dest = os.path.expandvars(part_dest)
                 dest_dir = os.path.dirname(dest)
 
-                if not os.path.exists(os.path.dirname(dest)):
-                    subprocess.run(["mkdir", "-p", dest_dir])
+                if not os.path.exists(dest_dir):
+                    os.makedirs(dest_dir)
+                elif os.path.exists(dest) and force:
+                    os.unlink(dest)
+                else:
+                    continue
 
-                subprocess.run(["ln", f"-ns{'f' if force else ''}", source, dest])
+                os.symlink(source, dest)
 
             print("...done\n")
 
