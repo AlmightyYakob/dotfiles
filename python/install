@@ -11,7 +11,8 @@ TARGET_PYTHON = "/usr/bin/python"
 SRC_PYTHON = "/usr/bin/python3"
 
 if os.path.exists(SRC_PYTHON) and os.path.exists(TARGET_PYTHON):
-    subprocess.run(["ln", "-ns", SRC_PYTHON, TARGET_PYTHON])
+    os.unlink(TARGET_PYTHON)
+    os.symlink(SRC_PYTHON, TARGET_PYTHON)
 
 
 # Install pip
