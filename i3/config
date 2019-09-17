@@ -213,8 +213,9 @@ bindsym XF86AudioPrev exec playerctl previous
 
 # More config
 #exec_always compton
-#exec_always feh --randomize --bg-fill ~/Pictures/wallpapers/*
-exec_always --no-startup-id xsetroot -solid "$bg-color"
+exec --no-startup-id $HOME/.config/i3/scripts/feh.sh
+bindsym $mod+n exec $HOME/.config/i3/scripts/feh.sh
+#exec_always --no-startup-id xsetroot -solid "$bg-color"
 
 # Start applets
 exec --no-startup-id nm-applet
