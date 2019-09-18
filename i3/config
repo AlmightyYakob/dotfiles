@@ -181,7 +181,8 @@ bindsym $mod+r mode "resize"
 exec_always --no-startup-id $HOME/.config/i3/scripts/polybar.sh
 
 # Lock Screen
-bindsym $mod+l exec i3lock --color "$bg-color"
+bindsym $mod+l exec $HOME/.config/i3/scripts/lock.py
+
 # Shutdown
 bindsym Control+$alt+s exec shutdown now
 
@@ -213,8 +214,8 @@ bindsym XF86AudioPrev exec playerctl previous
 
 # More config
 #exec_always compton
-exec --no-startup-id $HOME/.config/i3/scripts/feh.sh
-bindsym $mod+n exec $HOME/.config/i3/scripts/feh.sh
+exec --no-startup-id $HOME/.config/i3/scripts/feh
+bindsym $mod+n exec $HOME/.config/i3/scripts/feh
 #exec_always --no-startup-id xsetroot -solid "$bg-color"
 
 # Start applets
@@ -227,5 +228,5 @@ for_window [class=".*"] border pixel 0
 gaps inner 5
 # gaps outer 5
 
-bindsym $mod+z		gaps outer current plus 5
-bindsym $mod+Shift+z	gaps outer current minus 5
+bindsym $mod+z		    gaps inner current plus 5
+bindsym $mod+Shift+z	gaps inner current minus 5
