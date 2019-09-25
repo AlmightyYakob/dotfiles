@@ -164,7 +164,6 @@ bindsym $mod+r mode "resize"
 # bar {
 #         #status_command i3status
 #         #status_command i3blocks -c ~/.config/i3/i3blocks.conf
-#         status_command polybar example
 #         position top
 #         colors {
 # 		    background $bg-color
@@ -179,7 +178,7 @@ bindsym $mod+r mode "resize"
 exec_always --no-startup-id $HOME/.config/i3/scripts/polybar.sh
 
 # Lock Screen
-bindsym $mod+l exec $HOME/.config/i3/scripts/lock.py
+bindsym $mod+l exec i3lock --color 2f343f
 
 # Shutdown
 bindsym Control+$alt+s exec shutdown now

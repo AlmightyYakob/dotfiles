@@ -4,3 +4,6 @@
 rofi.theme: solarized_alternate
 rofi.font: System San Franciso Display 18
 
+! i3
+i3.bg: #2f343f
+
