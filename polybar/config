@@ -247,7 +247,7 @@ interface = ens2
 interval = 3.0
 
 format-connected-underline = #55aa55
-format-connected-prefix = " "
+format-connected-prefix = ""
 format-connected-prefix-foreground = ${colors.foreground-alt}
 label-connected = %local_ip%
 
@@ -316,6 +316,12 @@ format-discharging-underline = ${self.format-charging-underline}
 format-full-prefix = " "
 # format-full-prefix-foreground = ${colors.foreground-alt}
 format-full-underline = ${self.format-charging-underline}
+
+ramp-capacity-0-foreground = #fc0000
+ramp-capacity-1-foreground = #fc0000
+ramp-capacity-2-foreground = #fcb500
+ramp-capacity-3-foreground = #00fc00
+ramp-capacity-4-foreground = #00fc00
 
 ramp-capacity-0 = 
 ramp-capacity-1 = 
