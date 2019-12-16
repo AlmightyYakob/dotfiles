@@ -176,6 +176,7 @@ bindsym $mod+r mode "resize"
 # }
 
 exec_always --no-startup-id $HOME/.config/i3/scripts/polybar.sh
+# exec_always --no-startup-id $HOME/.config/polybar/launch.sh
 
 # Lock Screen
 bindsym $mod+l exec i3lock --color 2f343f
@@ -220,7 +221,7 @@ exec --no-startup-id nm-applet
 for_window [class=".*"] border pixel 0
 
 # i3-gaps
-gaps inner 5
+# gaps inner 5
 
 bindsym $mod+z		    gaps inner current plus 5
 bindsym $mod+Shift+z	gaps inner current minus 5
