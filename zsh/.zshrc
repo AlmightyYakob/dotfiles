@@ -74,6 +74,7 @@ source $ZSH/oh-my-zsh.sh
 
 # Add PATH entries
 export PATH=~/.local/bin:$PATH
+export PATH=/usr/local/go/bin:$PATH
 
 # Default editor
 export EDITOR=vim
@@ -81,6 +82,9 @@ export VISUAL="$EDITOR"
 
 # Dotfiles
 export DOTFILES=~/.dotfiles
+
+# Go
+export GOPATH=$HOME/go
 
 # For a full list of active aliases, run `alias`.
 
