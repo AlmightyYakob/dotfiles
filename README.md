@@ -52,3 +52,4 @@ These packages don't actualy have dotfiles, but are just packages I want to keep
 # Resources
 * [Configuring touchpad](https://cravencode.com/post/essentials/enable-tap-to-click-in-i3wm/)
 * [Polybar Themes](https://github.com/adi1090x/polybar-themes)
+* [Linux controller drivers for my wireless headset](https://github.com/Sapd/HeadsetControl)
