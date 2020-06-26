@@ -31,7 +31,7 @@ try:
     from pip._internal import main as pip_main
 
     pip_main(PIP_ARGS)
-except ImportError:
+except Exception:
     args = ["python", "-m", "pip"]
     args.extend(PIP_ARGS)
     subprocess.run(args)

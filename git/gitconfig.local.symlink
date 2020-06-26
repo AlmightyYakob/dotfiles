@@ -29,3 +29,5 @@
     compression = -1
     autocrlf = input
     whitespace = trailing-space,space-before-tab
+[interactive]
+    diffFilter = (echo && diff-so-fancy)

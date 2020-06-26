@@ -14,5 +14,17 @@
 	    "/home/jake/projects"
     ],
     "workbench.colorTheme": "Ayu Mirage",
-    "workbench.startupEditor": "none"
+    "workbench.startupEditor": "none",
+    "[vue]": {
+        "editor.defaultFormatter": "octref.vetur"
+    },
+    "[typescript]": {
+        "editor.defaultFormatter": "vscode.typescript-language-features"
+    },
+    "[json]": {
+        "editor.defaultFormatter": "vscode.json-language-features"
+    },
+    "files.insertFinalNewline": true,
+    "files.trimFinalNewlines": true,
+    "go.useLanguageServer": true
 }
