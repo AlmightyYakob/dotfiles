@@ -26,5 +26,20 @@
     },
     "files.insertFinalNewline": true,
     "files.trimFinalNewlines": true,
-    "go.useLanguageServer": true
+    "go.useLanguageServer": true,
+    "python.showStartPage": false,
+    "cSpell.userWords": [
+        "nesbitt"
+    ],
+    "editor.minimap.enabled": false,
+    "cSpell.enabled": false,
+    "workbench.editorAssociations": [
+        {
+            "viewType": "jupyter.notebook.ipynb",
+            "filenamePattern": "*.ipynb"
+        }
+    ],
+    "[javascript]": {
+        "editor.defaultFormatter": "vscode.typescript-language-features"
+    }
 }

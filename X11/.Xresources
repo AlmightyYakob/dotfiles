@@ -3,6 +3,8 @@
 
 rofi.theme: solarized_alternate
 rofi.font: System San Franciso Display 18
+rofi.show-icons:    true
+rofi.drun-icon-theme: Papirus-Dark
 
 ! i3
 i3.bg: #2f343f
