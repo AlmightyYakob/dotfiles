@@ -1,0 +1,4 @@
+{
+    ".profile.fish": "$HOME/.profile.fish",
+    "functions": "$HOME/.config/fish/functions"
+}
